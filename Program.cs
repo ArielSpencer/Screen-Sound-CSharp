@@ -2,7 +2,7 @@
 
 void PrintLogo()
 {
-  Console.WriteLine( @"
+  Console.WriteLine(@"
 ░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
 ██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝████╗░██║  ██╔════╝██╔══██╗██║░░░██║████╗░██║██╔══██╗
 ╚█████╗░██║░░╚═╝██████╔╝█████╗░░█████╗░░██╔██╗██║  ╚█████╗░██║░░██║██║░░░██║██╔██╗██║██║░░██║
@@ -27,13 +27,17 @@ void PrintMenuOptions()
 
   switch (choiceOptionInt)
   {
-    case 1: RegisterBand();
+    case 1:
+      RegisterBand();
       break;
-    case 2: ViewAllBands();
+    case 2:
+      ViewAllBands();
       break;
-    case 3: RateBand();
+    case 3:
+      RateBand();
       break;
-    case 4: ShowAverage();
+    case 4:
+      ShowAverage();
       break;
     case 5:
       Console.WriteLine("Bye!");
@@ -62,9 +66,22 @@ void ViewAllBands()
 {
   Console.Clear();
   Console.WriteLine("All bands registered:");
-  for (int i = 0; i < bandList.Count; i++)
+  // for (int i = 0; i < bandList.Count; i++)
+  // {
+  //   Console.WriteLine($"Band {i+1}: {bandList[i]}");
+  // }
+
+  //   int elements = bandList.Count;
+  // for (int i = 0; i < elements; i++)
+  // {
+  //   Console.WriteLine($"{i + 1} - {bandList[i]}");
+  // }
+
+  int i = 1;
+  foreach (var band in bandList)
   {
-    Console.WriteLine($"Band {i+1}: {bandList[i]}");
+    Console.WriteLine($"{i} - {band}");
+    i++;
   }
   Console.WriteLine("\nPress any key to return to the menu.");
   Console.ReadKey();
