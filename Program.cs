@@ -1,4 +1,4 @@
-﻿List<string> bandList = new List<string>();
+﻿List<string> bandList = new List<string> { "Lambda & The Expressions", "C-Sharp Minors", "Garbage Collector", "LINQin Park", "The Async/Awaiters", "Property Getters", "The Extension Methods" };
 
 void PrintLogo()
 {
