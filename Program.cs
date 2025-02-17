@@ -1,4 +1,4 @@
-﻿void PrintWelcomeMessage()
+﻿void PrintLogo()
 {
   Console.WriteLine( @"
 ░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
@@ -9,4 +9,15 @@
 ╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░");
 }
 
-PrintWelcomeMessage();
+void PrintMenuOptions()
+{
+  PrintLogo();
+  Console.WriteLine("\nPlease select an option:");
+  Console.WriteLine("1. Add a new band");
+  Console.WriteLine("2. View all bands");
+  Console.WriteLine("3. Rate a band");
+  Console.WriteLine("4. Show the average of a band");
+  Console.WriteLine("5. Exit");
+}
+
+PrintMenuOptions();
