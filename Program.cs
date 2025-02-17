@@ -52,11 +52,11 @@ void PrintMenuOptions()
 void RegisterBand()
 {
   Console.Clear();
-  Console.WriteLine("Add a new band!");
+  PrintOptionTitle("Register a new band");
   Console.WriteLine("Please enter the name of the band: ");
   string bandName = Console.ReadLine()!;
   bandList.Add(bandName);
-  Console.WriteLine($"You registered the band {bandName}!");
+  Console.WriteLine($"\nYou registered the band {bandName}!");
   Thread.Sleep(2000);
   Console.Clear();
   PrintMenuOptions();
@@ -64,19 +64,7 @@ void RegisterBand()
 
 void ViewAllBands()
 {
-  Console.Clear();
-  Console.WriteLine("All bands registered:");
-  // for (int i = 0; i < bandList.Count; i++)
-  // {
-  //   Console.WriteLine($"Band {i+1}: {bandList[i]}");
-  // }
-
-  //   int elements = bandList.Count;
-  // for (int i = 0; i < elements; i++)
-  // {
-  //   Console.WriteLine($"{i + 1} - {bandList[i]}");
-  // }
-
+  PrintOptionTitle("All bands registered");
   int i = 1;
   foreach (var band in bandList)
   {
@@ -103,6 +91,16 @@ void ShowAverage()
   Thread.Sleep(2000);
   Console.Clear();
   PrintMenuOptions();
+}
+
+void PrintOptionTitle(string title)
+{
+  Console.Clear();
+  int amountOfLetters = title.Length;
+  string asterisks = string.Empty.PadLeft(amountOfLetters, '*');
+  Console.WriteLine(asterisks);
+  Console.WriteLine(title);
+  Console.WriteLine(asterisks + "\n");
 }
 
 PrintMenuOptions();
