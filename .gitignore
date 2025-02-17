@@ -1,1 +1,47 @@
+# Ignore build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer log files
+*.log
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# User-specific files
+.vscode/
+
+# .DS_Store (Mac OS)
 .DS_Store
+
+# JetBrains Rider
+.idea/
+
+# Microsoft Visual Studio for Mac
+.vscode/
+
+# Uncomment if you have tasks that create project's static files
+# wwwroot/
