@@ -60,8 +60,14 @@ void RegisterBand()
 
 void ViewAllBands()
 {
-  Console.WriteLine("In this version, there are no bands registered yet.");
-  Thread.Sleep(2000);
+  Console.Clear();
+  Console.WriteLine("All bands registered:");
+  for (int i = 0; i < bandList.Count; i++)
+  {
+    Console.WriteLine($"Band {i+1}: {bandList[i]}");
+  }
+  Console.WriteLine("\nPress any key to return to the menu.");
+  Console.ReadKey();
   Console.Clear();
   PrintMenuOptions();
 }
